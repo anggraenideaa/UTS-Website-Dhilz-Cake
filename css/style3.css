@@ -1,0 +1,264 @@
+:root {
+	--biru:#A0CAE2;
+	--ungu:#974386;
+	--putih:#fff;
+	--hitam:#333;
+	--hijau:#DAEDCA;
+	--abu:#E1E1E1;
+	--border: .2rem solid rgba(0,0,0,.1);
+	--box-shadow:0 .5rem 1rem rgba(0,0,0.1);
+
+}
+
+/*Navbar*/
+.header1 .navbar1{
+	display: flex;
+	justify-content: space-between; /*lurus secara horizontal*/
+	align-items: center; /*lurus secara vertikal*/
+	padding: 0.5rem 7%; /*arti 1.4 1.4 kali 16px; 7% space kanan kiri sama disetiap device*/
+	background-color: white;
+	border-bottom: var(--border);
+	position: fixed;
+	top: 0; left: 0; right: 0;
+	z-index: 9999; /*utk navbar tdk ditumpuk elemen lain*/
+}
+/*.header .navbar.active{
+	background-color: red;
+	box-shadow: var(--box-shadow);
+	border: 0;
+}	*/
+.navbar1 .navbar-logo{
+	text-decoration: none;
+	color: var(--hitam);
+	flex: 1; /*rata kanan navbar menu*/
+}
+.navbar1 .navbar-logo a{
+	display: flex;
+	align-items: center;
+	font-size: 1.5rem;
+	font-weight: 500;
+	text-decoration: none;
+}
+.navbar1 .navbar-logo img{
+	height: 60px;
+}
+
+.navbar1 .navbar-nav1 a{
+	color: var(--hitam);
+	display: inline-block;
+	font-size: 1rem;
+	margin: 0 1.5rem;
+	text-decoration: none;
+
+}
+.navbar1 .navbar-nav1 a:hover{
+	color: var(--ungu);
+}
+
+#hamburger-menu{
+	display: none;
+	color: black;
+}
+.navbar1 .navbar-logo h4{
+	color: var(--hitam);
+	margin-left: 1rem;
+	margin-top: 9px;
+	font-family: 'Taviraj';
+}
+
+
+
+.katalog-header{
+	min-height: 38vh;
+	padding: 0 6%;
+	padding-top: 3rem;
+
+	align-items: center;
+	background-image: url("../img/b3.png"); /*pake ../ karena ada dlm css*/
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+
+*{
+	font-family: 'Poppins', sans-serif;
+}
+.navbar {
+	background-color: #593D32;
+}
+.navbar-brand{
+	margin-right: 0px;
+	margin-left: 20px;
+}
+.navbar-brand img{
+		height: 60px;
+	}
+.navbar-nav{
+	align-items: center;
+}
+.navbar .navbar-nav .nav-link{
+	color: #974386;
+	margin: 0 30px;
+}
+
+.nav-link:hover {
+	color: #ebeb !important; 
+}
+.container #accordion .card{
+	box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.25);
+}
+.container #accordion .card-body{
+	font-size: 15px;/
+	color: #000;
+}
+
+.container #accordion .card .card-header{
+	background-color: #fff;
+
+}
+.card-link{
+	color: #000;
+	font-size: 14px;
+	font-weight: bold;
+}
+.card-link:hover{
+	color: #974386;
+}
+.card-link:after{
+	content: '\2212';
+	width: 35px;
+	font-size: 20px;
+	text-align: center;
+	border-radius: 5px;
+	right: 15px;
+	position: absolute;
+}
+.card-link.collapsed:after{
+	content: '\002B';
+}
+.card-body{
+	background-color: #fff;	
+
+}
+.container .col-sm-6{
+	margin-top
+}
+.card .card-body-footer{
+	background-color: #000;
+	color: #fff;
+}
+i{
+	margin: 4px;
+}
+.card .card-footer{
+	background-color: #E5E5E5;
+}
+
+
+/*Media Queries*/
+/*laptop*/
+@media (max-width: 1366px) {
+	/**{
+		font-size: 90%;
+	}*/
+}
+
+/*tablet*/
+@media (max-width: 768px) {
+	/**{
+		font-size: 80%;
+		
+	}*/
+	#hamburger-menu {
+		display: inline-block;
+		transition: .2s linear;
+	}
+	/*buat rotate hamburger button*/
+	#hamburger-menu.fa-times{ 
+		transform: rotate(180deg); 
+	}
+	#hamburger-menu.fa-times:before{ 
+		content: none;
+	}
+	.navbar1 .navbar-nav1{
+		position: absolute;
+		top: 100%;
+		right: -100%;
+		background-color: var(--hitam);
+		width: 20rem;
+		height: 100vh;
+		transition: 0.3s;
+		flex-flow: column;
+		clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+	}
+
+	.navbar1 .navbar-nav1.active{
+		right: 0;
+		clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+	}
+
+	.navbar1 .navbar-nav1 a{
+		color: var(--putih);
+		display: block;
+		margin: 1.5rem;
+		padding: 0.5rem;
+		font-size: 1rem;
+	}*
+	.katalog-card1{
+	display: inline-block;
+	text-align: center;
+	
+	margin-bottom: 3rem;
+	}
+
+	.card-dsn{
+		display: inline-block;
+		text-align: center;
+
+
+	}
+	/*mobile*/
+	@media (max-width: 450px) {
+		/**{
+			font-size:60%;
+			
+		}*/
+		
+	}
+
+
+
+	@media screen and (min-width: 992px){
+		.navbar-brand img{
+			height: 70px;
+		}
+	}
+	@media screen and (max-width: 600px){
+		.card-img {
+			width: 100%;
+			display: block;
+			margin-bottom: 20px;
+		}
+	}
+	@media (max-width: 1366px) {
+		*{
+			font-size: 90%;
+		}
+	}
+
+	/tablet/
+	@media (max-width: 768px) {
+		*{
+			font-size: 80%;
+			
+		}
+	}
+	/mobile/
+	@media (max-width: 450px) {
+		*{
+			font-size:60%;
+			
+		}
+		
+	}
